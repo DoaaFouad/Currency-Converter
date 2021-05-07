@@ -28,5 +28,4 @@ class CurrencyRatesRepository(val fixerAPIService: FixerAPIService) : BaseReposi
             }
 
         }
-
 }

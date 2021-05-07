@@ -1,0 +1,12 @@
+/*
+ * Created by Doaa Fouad on 5/7/21 1:55 PM
+ * doaa_fouad2006@hotmail.com
+ * github.com/DoaaFouad
+ * linkedin.com/in/doaafouad/
+ *
+ * Last modified 4/4/21 2:05 AM
+ */
+
+package com.emc.voicenote.base
+
+interface ViewState

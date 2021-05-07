@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Doaa Fouad on 5/7/21 2:03 PM
+  ~ doaa_fouad2006@hotmail.com
+  ~ github.com/DoaaFouad
+  ~ linkedin.com/in/doaafouad/
+  ~
+  ~ Last modified 5/7/21 2:03 PM
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,7 @@ abstract class BaseActivity<I : ViewIntent, S : ViewState, E : ViewEffect, V : V
 
         binding = getViewBinding()
         setContentView(binding?.root)
-        render()
+        observeViewState()
         init()
     }
 
@@ -38,7 +38,7 @@ abstract class BaseActivity<I : ViewIntent, S : ViewState, E : ViewEffect, V : V
         binding = null
     }
 
-    abstract fun render()
+    abstract fun observeViewState()
     abstract fun getViewBinding(): V
 
     open fun init() {}

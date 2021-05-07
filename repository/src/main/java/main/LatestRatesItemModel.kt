@@ -12,5 +12,12 @@ package main
 import base.ItemModel
 
 data class LatestRatesItemModel(
-    val success: Boolean
+    val success: Boolean,
+    val rates: RatesItemModel
 ): ItemModel
+
+data class RatesItemModel(
+    val aud: RateItemModel,
+    val usd: RateItemModel,
+    val gbp: RateItemModel
+)

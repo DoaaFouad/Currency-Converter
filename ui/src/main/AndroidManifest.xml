@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CurrencyConvertor"
         android:name=".CurrencyConvertorApplication">
-        <activity android:name=".main.LatestRatesActivity">
+        <activity android:name=".main.LatestRatesActivity" android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

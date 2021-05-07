@@ -20,7 +20,12 @@ class LatestRatesResponseMapper :
 
     override fun mapToItem(model: LatestRatesRemoteResponse?): LatestRatesItemModel {
         return LatestRatesItemModel(
-            success = model?.success ?: false
+            success = model?.success ?: false,
+            rates = RatesItemModel(
+                aud = RateItemModel(Currency.AUD, model?.rates?.aud ?: ""),
+                usd = RateItemModel(Currency.USD, model?.rates?.usd ?: ""),
+                gbp = RateItemModel(Currency.GBP, model?.rates?.gbp ?: "")
+            )
         )
     }
 }

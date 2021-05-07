@@ -12,6 +12,7 @@ package main.latest_rates
 import com.emc.voicenote.base.ViewEffect
 import com.emc.voicenote.base.ViewIntent
 import com.emc.voicenote.base.ViewState
+import main.RateItemModel
 
 class LatestRatesContract {
     sealed class Intent : ViewIntent {
@@ -25,7 +26,7 @@ class LatestRatesContract {
     sealed class LatestRatesViewState {
         object Idle : LatestRatesViewState()
         object Loading : LatestRatesViewState()
-        //data class Success(val feed: List<FeedDataItemModel>?) : LatestRatesViewState()
+        data class Success(val latestRates: List<RateItemModel>) : LatestRatesViewState()
     }
 
     sealed class Effect : ViewEffect {

@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.doaa.currencyconvertor.databinding.RowLatestRateBinding
 import main.RateItemModel
 
-class LatestRatesAdapter(val latestRateListener: LatestRateListener) :
+class LatestRatesAdapter(val latestRatesListener: LatestRatesListener) :
     RecyclerView.Adapter<LatestRatesViewHolder>() {
 
     private var ratesList: MutableList<RateItemModel> = arrayListOf()
@@ -23,7 +23,7 @@ class LatestRatesAdapter(val latestRateListener: LatestRateListener) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestRatesViewHolder {
         val itemBinding =
             RowLatestRateBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return LatestRatesViewHolder(itemBinding, latestRateListener)
+        return LatestRatesViewHolder(itemBinding, latestRatesListener)
     }
 
     override fun getItemCount(): Int {

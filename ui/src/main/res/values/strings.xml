@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">CurrencyConvertor</string>
 
-    <string name="currency_euro">EURO</string>
+    <string name="currency_euro">EUR</string>
 </resources>

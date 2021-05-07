@@ -10,13 +10,14 @@
 package main.latest_rates
 
 import base.BaseViewModel
+import main.Currency
 import main.CurrencyRatesRepository
 import main.RateItemModel
 
 class LatestRatesViewModel(val currencyRatesRepository: CurrencyRatesRepository) :
     BaseViewModel<LatestRatesContract.Intent, LatestRatesContract.State, LatestRatesContract.Effect>() {
 
-    private val DEFAULT_BASE_CURRENCY = "EURO"
+    private val DEFAULT_BASE_CURRENCY = "EUR"
 
     override fun createInitialState(): LatestRatesContract.State {
         return LatestRatesContract.State(LatestRatesContract.LatestRatesViewState.Idle)
@@ -52,5 +53,4 @@ class LatestRatesViewModel(val currencyRatesRepository: CurrencyRatesRepository)
             setEffect { LatestRatesContract.Effect.ShowServerErrorToast }
         }
     }
-
 }

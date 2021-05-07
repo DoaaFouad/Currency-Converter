@@ -21,7 +21,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LatestRatesActivity :
     BaseActivity<LatestRatesContract.Intent, LatestRatesContract.State, LatestRatesContract.Effect, ActivityLatestRatesBinding>(),
-    LatestRateListener {
+    LatestRatesListener {
 
     override val viewModel by viewModel<LatestRatesViewModel>()
 
@@ -61,8 +61,13 @@ class LatestRatesActivity :
         latestRatesAdapter.setData(latestRates)
     }
 
-    override fun onRateClick(rate: String) {
+    override fun onRateClick(targetRate: RateItemModel) {
+        openRateCalculationsBottomSheet(targetRate)
+    }
 
+    private fun openRateCalculationsBottomSheet(targetRate: RateItemModel) {
+        val rateCalculationBottomSheet = BottomSheetRateCalculation(targetCurrency = targetRate)
+        rateCalculationBottomSheet.show(supportFragmentManager, "FEED_COMMENTS")
     }
 
     override fun getViewBinding(): ActivityLatestRatesBinding {

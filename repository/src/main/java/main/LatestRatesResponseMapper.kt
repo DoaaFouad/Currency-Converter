@@ -22,9 +22,9 @@ class LatestRatesResponseMapper :
         return LatestRatesItemModel(
             success = model?.success ?: false,
             rates = RatesItemModel(
-                aud = RateItemModel(Currency.AUD, model?.rates?.aud ?: ""),
-                usd = RateItemModel(Currency.USD, model?.rates?.usd ?: ""),
-                gbp = RateItemModel(Currency.GBP, model?.rates?.gbp ?: "")
+                aud = RateItemModel(Currency.AUD, model?.rates?.aud ?: 0.0),
+                usd = RateItemModel(Currency.USD, model?.rates?.usd ?: 0.0),
+                gbp = RateItemModel(Currency.GBP, model?.rates?.gbp ?: 0.0)
             )
         )
     }

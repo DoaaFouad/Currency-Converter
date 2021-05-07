@@ -12,7 +12,7 @@ package main
 import base.ItemModel
 
 data class RateItemModel(
-    val currency: Currency, val rate: String
+    val currency: Currency, val rate: Double
 ): ItemModel
 
 enum class Currency {

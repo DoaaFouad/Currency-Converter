@@ -32,12 +32,12 @@ data class LatestRatesRemoteResponse(
 
 data class RatesRemoteResponse(
     @SerializedName("AUD")
-    var aud: String?,
+    var aud: Double?,
 
     @SerializedName("USD")
-    var usd: String?,
+    var usd: Double?,
 
     @SerializedName("GBP")
-    var gbp: String?
+    var gbp: Double?
 
 ) : RemoteModel

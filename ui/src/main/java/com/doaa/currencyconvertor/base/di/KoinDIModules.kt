@@ -13,11 +13,13 @@ import builder.OkHttpBuilder
 import builder.RetrofitBuilder
 import main.CurrencyRatesRepository
 import main.latest_rates.LatestRatesViewModel
+import main.rate_calculation.RateCalculationViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
     viewModel { LatestRatesViewModel(get()) }
+    viewModel { RateCalculationViewModel() }
 }
 
 val repositoryModule = module {

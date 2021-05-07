@@ -9,7 +9,9 @@
 
 package com.doaa.currencyconvertor.main
 
-interface LatestRateListener {
+import main.RateItemModel
 
-    fun onRateClick(rate: String)
+interface LatestRatesListener {
+
+    fun onRateClick(targetRate: RateItemModel)
 }

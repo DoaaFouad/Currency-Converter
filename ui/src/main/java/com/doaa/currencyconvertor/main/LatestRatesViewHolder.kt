@@ -17,17 +17,21 @@ import main.RateItemModel
 
 class LatestRatesViewHolder(
     val rowLatestRateBinding: RowLatestRateBinding,
-    val latestRateListener: LatestRateListener
+    val latestRatesListener: LatestRatesListener
 ) :
     RecyclerView.ViewHolder(rowLatestRateBinding.root) {
 
     fun initRow(model: RateItemModel) {
         rowLatestRateBinding.tvCurrencyName.text = model.currency.name
-        rowLatestRateBinding.tvCurrencyRate.text = model.rate
+        rowLatestRateBinding.tvCurrencyRate.text = model.rate.toString()
 
         val icon = currencyDrawableResource(model.currency)
         icon?.let {
             rowLatestRateBinding.ivCurrency.setImageResource(icon)
+        }
+
+        rowLatestRateBinding.root.setOnClickListener {
+            latestRatesListener.onRateClick(targetRate = model)
         }
     }
 
